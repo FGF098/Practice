@@ -14,17 +14,13 @@ class Program
 public:
 
     // if in usage list are same resourse usages, uses last in list
-    Program(QString newName, QString newProducer, QVector<QPair<const Resourse*, const UseType*>> newUsage);
+    Program(QString newName, QString newProducer, QVector<const UseType*> newUsages);
 
     // return list of pair resourse - his usage
     QVector<QPair<const Resourse*, unsigned int>>CalcUsage(unsigned int workValue) const;
 
-    // add new usage for resourse, if resourse already using - change usage
     // also use this function for changing parameters of usage
-    void addOrChangeUsage(const Resourse* newResourse, const UseType* newUsage);
-
-    // delete usage of this resourse; if it not used already - it's OK
-    void deleteUsage(const Resourse* deletedResourse);
+    void ChangeUsage(const UseType* newUsage);
 
     QString getName() const;
     QString getProducer() const;
@@ -39,7 +35,7 @@ private:
 
     // list of pair resourse - usage function (resourse must be unique) for easier functionality
     // but they isn't sorted!
-    QVector<QPair<const Resourse*, const UseType*>> usage = QVector<QPair<const Resourse*, const UseType*>>();
+    QVector<const UseType*> usage = QVector<const UseType*>();
 
     QVector<QDateTime> updateList = QVector<QDateTime>();
 

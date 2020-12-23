@@ -14,7 +14,8 @@ SOURCES += \
     program.cpp \
     resourse.cpp \
     systemprograms.cpp \
-    systemresourses.cpp
+    systemresourses.cpp \
+    usetype.cpp
 
 HEADERS += \
     mainwindow.h \
