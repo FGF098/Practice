@@ -1,5 +1,5 @@
-#ifndef SYSTEM_H
-#define SYSTEM_H
+#ifndef SYSTEMPARAMETERS_H
+#define SYSTEMPARAMETERS_H
 
 #include <QVector>
 #include <QPair>
@@ -8,7 +8,8 @@
 #include "program.h"
 
 // use usual acess in private, give const pointers in getters
-class System
+// container for system resourses
+class SystemParameters
 {
 public:
 
@@ -31,30 +32,24 @@ public:
     const SystemResourse GPU_RAM = SystemResourse("GPU RAM", "MB", 8192);
 
     //default initializing with const-based resourses (previous)
-    System();
+    SystemParameters();
 
     //initializing with custom max value for default resourses
-    System(unsigned int maxCPU, unsigned int maxCPU_RAM, unsigned int maxSSD, unsigned int maxLAN, unsigned int maxGPU, unsigned int maxGPU_RAM);
+    SystemParameters(unsigned int maxCPU, unsigned int maxCPU_RAM, unsigned int maxSSD, unsigned int maxLAN, unsigned int maxGPU, unsigned int maxGPU_RAM);
 
     //initializing with custom system(!) resourses
-    System(const QVector<SystemResourse> resourses);
+    SystemParameters(const QVector<SystemResourse> newResourses);
 
     //getters
     QVector<const Resourse*> getResourses();
-    // don't allow to change programs, because they can be deleted too
-    QVector<const Program*> getPrograms();
 
-    //function of
-
-    ~System();
+    // return false if index out of range
+    bool ChangeMaxValue(int indexOfResourse, unsigned int newMaxValue);
 
 private:
 
-    QVector<SystemResourse> resourses;
-
-    // save programs and the work value
-    QVector<QPair<Program, unsigned int>> programsAndWorks;
+    QVector<SystemResourse> resourses = QVector<SystemResourse>();
 
 };
 
-#endif // SYSTEM_H
+#endif // SYSTEMPARAMETERS_H
