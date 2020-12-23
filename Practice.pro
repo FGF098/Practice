@@ -14,6 +14,7 @@ SOURCES += \
     program.cpp \
     resourse.cpp \
     systemparameters.cpp \
+    systemprograms.cpp \
     systemresourse.cpp
 
 HEADERS += \
@@ -21,6 +22,7 @@ HEADERS += \
     program.h \
     resourse.h \
     systemparameters.h \
+    systemprograms.h \
     systemresourse.h \
     usetype.h
 
