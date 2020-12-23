@@ -3,7 +3,7 @@
 
 #include <QString>
 
-// for using in program,
+// abstract class for resourses for using in programs (they can't create resourses
 class Resourse
 {
 public:
@@ -11,13 +11,13 @@ public:
     // constructor
     Resourse(QString newName, QString newUnitOfMeasurement, unsigned int newMaxValue);
 
-    //getters
-    QString getName();
-    QString getUnitOfMeasurement();
-    unsigned int getMaxValue();
+    //getters - const
+    QString getName() const;
+    QString getUnitOfMeasurement() const;
+    unsigned int getMaxValue() const;
 
-    // abstract function for protecting from intialization and unprotected changing
-    virtual void SetMaxValue(unsigned int newMaxValue) = 0;
+    // pure virtual function for system resourse
+    virtual void setMaxValue(unsigned int newMaxValue) = 0;
 
 protected:
 
@@ -26,6 +26,7 @@ protected:
     QString unitOfMeasurement;
 
     // may be changed after initialization, but only in system version
+    // also can't be setted here
     unsigned int maxValue;
 };
 

@@ -11,13 +11,16 @@ CONFIG += c++11
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
+    program.cpp \
     resourse.cpp \
     systemresourse.cpp
 
 HEADERS += \
     mainwindow.h \
+    program.h \
     resourse.h \
-    systemresourse.h
+    systemresourse.h \
+    usetype.h
 
 FORMS += \
     mainwindow.ui

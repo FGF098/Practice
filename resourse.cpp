@@ -7,17 +7,17 @@ Resourse::Resourse(QString newName, QString newUnitOfMeasurement, unsigned int n
     maxValue = newMaxValue;
 }
 
-QString Resourse::getName()
+QString Resourse::getName() const
 {
     return name;
 }
 
-QString Resourse::getUnitOfMeasurement()
+QString Resourse::getUnitOfMeasurement() const
 {
     return unitOfMeasurement;
 }
 
-unsigned int Resourse::getMaxValue()
+unsigned int Resourse::getMaxValue() const
 {
     return maxValue;
 }

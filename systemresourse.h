@@ -3,15 +3,14 @@
 
 #include "resourse.h"
 
-// for creating and controlling by system
-class SystemResourse : Resourse
+// resourse for system
+class SystemResourse : public Resourse
 {
 public:
 
-    SystemResourse(QString newName, QString newUnitOfMeasurement, unsigned int newMaxValue) :
-        Resourse(newName, newUnitOfMeasurement, newMaxValue) {}
+    SystemResourse(QString newName, QString newUnitOfMeasurement, unsigned int newMaxValue);
 
-    void SetMaxValue(unsigned int newMaxValue) override;
+    void setMaxValue(unsigned int newMaxValue) override;
 };
 
 #endif // SYSTEMRESOURSE_H
