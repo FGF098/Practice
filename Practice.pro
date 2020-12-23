@@ -13,17 +13,15 @@ SOURCES += \
     mainwindow.cpp \
     program.cpp \
     resourse.cpp \
-    systemparameters.cpp \
     systemprograms.cpp \
-    systemresourse.cpp
+    systemresourses.cpp
 
 HEADERS += \
     mainwindow.h \
     program.h \
     resourse.h \
-    systemparameters.h \
     systemprograms.h \
-    systemresourse.h \
+    systemresourses.h \
     usetype.h
 
 FORMS += \

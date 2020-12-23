@@ -16,9 +16,6 @@ public:
     QString getUnitOfMeasurement() const;
     unsigned int getMaxValue() const;
 
-    // pure virtual function for system resourse
-    virtual void setMaxValue(unsigned int newMaxValue) = 0;
-
 protected:
 
     // can't be changed after initialization
