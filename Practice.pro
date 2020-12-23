@@ -13,12 +13,14 @@ SOURCES += \
     mainwindow.cpp \
     program.cpp \
     resourse.cpp \
+    system.cpp \
     systemresourse.cpp
 
 HEADERS += \
     mainwindow.h \
     program.h \
     resourse.h \
+    system.h \
     systemresourse.h \
     usetype.h
 
