@@ -38,9 +38,9 @@ public:
     SystemResourses(const QVector<Resourse>* newResourses);
 
     //getters
-    QVector<const Resourse*> getResourses();
+    QVector<const Resourse*> getResourses() const;
 
-private:
+protected:
 
     QVector<Resourse> resourses = QVector<Resourse>();
 

@@ -19,3 +19,17 @@ SystemResourses::SystemResourses(const QVector<Resourse>* newResourses)
         resourses.push_back((*newResourses)[i]);
     }
 }
+
+QVector<const Resourse*> SystemResourses::getResourses() const
+{
+    int size = resourses.size();
+
+    QVector<const Resourse*> result(size);
+
+    for(int i = 0; i < size; i++)
+    {
+        result[i] = &(resourses[i]);
+    }
+
+    return result;
+}
