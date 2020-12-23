@@ -56,6 +56,8 @@ QVector<QPair<const Resourse*, unsigned int>> Program::CalcUsage(unsigned int wo
 
 void Program::addOrChangeUsage(const Resourse* newResourse, const UseType* newUsage)
 {
+    setUpdateDateTime();
+
     int size = usage.size();
 
     // flag for add new usage
@@ -84,6 +86,8 @@ void Program::addOrChangeUsage(const Resourse* newResourse, const UseType* newUs
 
 void Program::deleteUsage(const Resourse* deletedResourse)
 {
+    setUpdateDateTime();
+
     int size = usage.size();
 
     for(int i = 0; i < size; i++)
@@ -96,6 +100,7 @@ void Program::deleteUsage(const Resourse* deletedResourse)
             break;
         }
     }
+
 }
 
 QString Program::getName() const
@@ -106,4 +111,23 @@ QString Program::getName() const
 QString Program::getProducer() const
 {
     return producer;
+}
+
+QVector<QDateTime> Program::getUpdateList() const
+{
+    int size = updateList.size();
+
+    QVector<QDateTime> updateListCopy(size);
+
+    for(int i = 0; i < size; i++)
+    {
+        updateListCopy[i] = updateList[i];
+    }
+
+    return updateListCopy;
+}
+
+void Program::setUpdateDateTime()
+{
+    updateList.push_back(QDateTime::currentDateTime());
 }

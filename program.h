@@ -29,6 +29,8 @@ public:
     QString getName() const;
     QString getProducer() const;
 
+    QVector<QDateTime> getUpdateList() const;
+
 private:
 
     // can't be changed after initialization
@@ -42,7 +44,7 @@ private:
     QVector<QDateTime> updateList = QVector<QDateTime>();
 
     // add to updateList date-time of a update
-    void setUpdateTime();
+    void setUpdateDateTime();
 };
 
 #endif // PROGRAM_H
