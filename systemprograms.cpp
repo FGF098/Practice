@@ -1,8 +1,12 @@
 #include "systemprograms.h"
 
+#include "realizedprogram.h"
+
 SystemPrograms::SystemPrograms()
 {
-    // TODO:
+    programs.push_back(GAME);
+    programs.push_back(BROWSER);
+    programs.push_back(AVTIVIRUS);
 }
 
 SystemPrograms::SystemPrograms(const QVector<Program>* newPrograms)

@@ -29,6 +29,8 @@ HEADERS += \
     program.h \
     proportionalusetype.h \
     rangedproportionalusetype.h \
+    realizedprogram.h \
+    realizedusetype.h \
     resourse.h \
     system.h \
     systemprograms.h \
