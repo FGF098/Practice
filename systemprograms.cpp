@@ -28,3 +28,8 @@ QVector<const Program*> SystemPrograms::getPrograms()
 
     return result;
 }
+
+void SystemPrograms::ChangeProgram(int index, const UseType* newType)
+{
+    programs[index].ChangeUsage(newType);
+}

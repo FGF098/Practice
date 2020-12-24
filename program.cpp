@@ -81,11 +81,11 @@ QString Program::getProducer() const
     return producer;
 }
 
-QVector<QDateTime> Program::getUpdateList() const
+QVector<QTime> Program::getUpdateList() const
 {
     int size = updateList.size();
 
-    QVector<QDateTime> updateListCopy(size);
+    QVector<QTime> updateListCopy(size);
 
     for(int i = 0; i < size; i++)
     {
@@ -97,5 +97,5 @@ QVector<QDateTime> Program::getUpdateList() const
 
 void Program::setUpdateDateTime()
 {
-    updateList.push_back(QDateTime::currentDateTime());
+    updateList.push_back(QTime::currentTime());
 }

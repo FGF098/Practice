@@ -4,7 +4,7 @@
 #include <QString>
 #include <QPair>
 #include <QVector>
-#include <QDateTime>
+#include <QTime>
 
 #include "resourse.h"
 #include "usetype.h"
@@ -25,7 +25,7 @@ public:
     QString getName() const;
     QString getProducer() const;
 
-    QVector<QDateTime> getUpdateList() const;
+    QVector<QTime> getUpdateList() const;
 
 private:
 
@@ -37,7 +37,7 @@ private:
     // but they isn't sorted!
     QVector<const UseType*> usage = QVector<const UseType*>();
 
-    QVector<QDateTime> updateList = QVector<QDateTime>();
+    QVector<QTime> updateList = QVector<QTime>();
 
     // add to updateList date-time of a update
     void setUpdateDateTime();

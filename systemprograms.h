@@ -19,6 +19,8 @@ public:
 
     QVector<const Program*> getPrograms();
 
+    void ChangeProgram(int index, const UseType* newType);
+
 protected:
 
     QVector<Program> programs = QVector<Program>();

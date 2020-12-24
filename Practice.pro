@@ -17,6 +17,7 @@ SOURCES += \
     proportionalusetype.cpp \
     rangedproportionalusetype.cpp \
     resourse.cpp \
+    system.cpp \
     systemprograms.cpp \
     systemresourses.cpp \
     usetype.cpp
@@ -29,6 +30,7 @@ HEADERS += \
     proportionalusetype.h \
     rangedproportionalusetype.h \
     resourse.h \
+    system.h \
     systemprograms.h \
     systemresourses.h \
     usetype.h
