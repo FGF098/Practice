@@ -7,7 +7,7 @@
 class ProportionalUseType : public UseType
 {
 public:
-    ProportionalUseType(Resourse use, unsigned int newValue);
+    ProportionalUseType(const Resourse* use, unsigned int newValue);
 
     unsigned int CalcUsage(unsigned int workValue) const override;
 

@@ -1,6 +1,6 @@
 #include "fixedusetype.h"
 
-FixedUseType::FixedUseType(Resourse use,unsigned int newValue) : UseType(use)
+FixedUseType::FixedUseType(const Resourse* use, unsigned int newValue) : UseType(use)
 {
     value = newValue;
 }

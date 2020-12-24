@@ -8,7 +8,7 @@ class FixedUseType : public UseType
 {
 public:
 
-    FixedUseType(Resourse use, unsigned int newValue);
+    FixedUseType(const Resourse* use, unsigned int newValue);
 
     unsigned int CalcUsage(unsigned int workValue) const override;
 

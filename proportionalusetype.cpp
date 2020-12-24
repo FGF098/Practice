@@ -1,6 +1,6 @@
 #include "proportionalusetype.h"
 
-ProportionalUseType::ProportionalUseType(Resourse use, unsigned int newValue) : UseType(use)
+ProportionalUseType::ProportionalUseType(const Resourse* use, unsigned int newValue) : UseType(use)
 {
     value = newValue;
 }

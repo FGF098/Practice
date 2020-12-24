@@ -1,6 +1,6 @@
 #include "usetype.h"
 
-UseType::UseType(Resourse use) : used(use) {}
+UseType::UseType(const Resourse* use) : used(*use) {}
 
 const Resourse* UseType::getResourse() const
 {

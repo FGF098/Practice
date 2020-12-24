@@ -10,6 +10,7 @@ CONFIG += c++11
 
 SOURCES += \
     fixedusetype.cpp \
+    jumpusetype.cpp \
     main.cpp \
     mainwindow.cpp \
     program.cpp \
@@ -21,6 +22,7 @@ SOURCES += \
 
 HEADERS += \
     fixedusetype.h \
+    jumpusetype.h \
     mainwindow.h \
     program.h \
     proportionalusetype.h \

@@ -7,7 +7,7 @@ class UseType
 {
 public:
 
-    UseType(Resourse use);
+    UseType(const Resourse* use);
 
     const Resourse* getResourse() const;
 
