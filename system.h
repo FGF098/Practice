@@ -17,6 +17,7 @@ public:
     // return false if usage is too big, fail change
     bool updateWorkValue(int index, unsigned int newWorkValue);
 
+    // first - program index, second - resourse
     QVector<QVector<unsigned int>> getUsage() const;
 
 protected:
